@@ -36,3 +36,19 @@ margin: 15px auto;
     width: 90%;
     margin: 10px auto;
     text-align: justify; 
+}
+a {
+    color: wheat;       /* sets URL text color */
+    text-decoration: none; /* removes underline, optional */
+}
+
+/* when hovering over link */
+a:hover {
+    color: #fffacd;     /* optional: a lighter color on hover */
+    text-decoration: underline; /* optional: underline on hover */
+}
+
+/* visited link */
+a:visited {
+    color: #f5deb3;     /* optional: slightly different shade */
+}
