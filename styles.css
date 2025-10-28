@@ -23,8 +23,8 @@ box-shadow: 0 4px 10px seagreen(0, 0, 0, 0.2);
 .project img{
 width: 100%;
 height: auto;
-max-height: 400px;
-margin: 10px;
+max-height: 600px;
+margin: 15px;
 border: 2px solid wheat(126, 14, 201); /* choose a color */
 display: block;
 margin: 15px auto;
