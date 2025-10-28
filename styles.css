@@ -15,11 +15,3 @@ padding: 20px 10px;
 background: seagreen; /* pick a color */
 border-radius: 25%;
 }
-.project img{
-width: 600px;
-height: 600px;
-margin: 10px;
-border: 2px solid wheat(126, 14, 201); /* choose a color */
-display: block;
-margin: auto;
-}
