@@ -1,54 +1,105 @@
+/* ===== BODY ===== */
 body {
-    background: seagreen;
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    background: #e0f2f1; /* soft teal for easier reading */
+    font-family: 'Arial', Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
+
+/* ===== HEADINGS ===== */
 h1 {
-    color: wheat;
+    color: #00695c; /* dark teal for contrast */
     text-align: center;
-    margin:20px;
+    margin: 40px 0 20px 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
 }
-.projects { display:flex; 
-    flex-wrap:wrap; } /* condensed to save space */
+
+h2 {
+    color: #004d40;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ===== PROJECTS GRID ===== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== INDIVIDUAL PROJECT CARDS ===== */
 .project {
-width: 300px;
-margin: 20px;
-padding: 20px;
-background: seagreen; /* pick a color */
-border-radius: 15%;
-box-shadow: 0 4px 10px seagreen(0, 0, 0, 0.2);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.project img{
-width: 100%;
-height: auto;
-max-height: 600px;
-margin: 15px;
-border: 2px solid wheat(126, 14, 201); /* choose a color */
-display: block;
-margin: 15px auto;
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
+
+/* ===== PROJECT IMAGES ===== */
+.project img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 2px solid #004d40; /* dark teal border */
+    object-fit: cover;
+}
+
+/* ===== PROJECT DESCRIPTION ===== */
 .project p {
-    color: black;
-    font-size: 18px; /* makes text longer and easier to read */
+    font-size: 16px;
     line-height: 1.6;
-    width: 90%;
-    margin: 10px auto;
-    text-align: justify; 
+    text-align: justify;
+    margin: 10px auto 0 auto;
+    color: #333;
 }
+
+/* ===== LINKS ===== */
 a {
-    color: wheat;       /* sets URL text color */
-    text-decoration: none; /* removes underline, optional */
+    color: #00695c;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* when hovering over link */
 a:hover {
-    color: #fffacd;     /* optional: a lighter color on hover */
-    text-decoration: underline; /* optional: underline on hover */
+    color: #004d40;
+    text-decoration: underline;
 }
 
-/* visited link */
 a:visited {
-    color: #f5deb3;     /* optional: slightly different shade */
+    color: #00796b;
+}
+
+/* ===== ABOUT, SKILLS, CONTACT SECTIONS ===== */
+.about, .skills, .contact {
+    background: #ffffff;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== RESPONSIVE TEXT ===== */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .project p {
+        font-size: 15px;
+    }
 }
