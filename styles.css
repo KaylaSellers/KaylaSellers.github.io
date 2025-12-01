@@ -1,109 +1,146 @@
-/* ================= BODY ================= */
+/* GENERAL STYLES */
 body {
+    background-color: #2e7d32; /* dark green */
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e6f2ea; /* soft mint green background */
-    color: #2c3e2f; /* dark green text */
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
-header h1, h1 {
+h1, h2, h3 {
+    color: #fffacd; /* light yellow for headings */
+    margin: 10px 0;
+}
+
+h1 {
     text-align: center;
     font-size: 3rem;
-    margin: 40px 0 20px 0;
-    color: #14532d; /* dark forest green */
-    letter-spacing: 1px;
+    margin-top: 30px;
 }
 
-/* ================= CONTAINER SECTIONS ================= */
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* ================= HEADINGS ================= */
 h2 {
-    text-align: center;
-    color: #1e5631; /* medium dark green */
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-/* ================= PROJECTS GRID ================= */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-/* ================= PROJECT CARDS ================= */
-.project {
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+}
+
+/* ABOUT SECTION */
+.about-me {
+    background-color: #388e3c; /* lighter green for section */
     padding: 20px;
     border-radius: 15px;
-    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fffacd;
+}
+
+/* SKILLS SECTION */
+.skills {
+    background-color: #43a047; /* medium green */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.resume-links a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1b5e20;
+    color: #fffacd;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.resume-links a:hover {
+    background-color: #f5f5dc;
+    color: #2e7d32;
+}
+
+/* PROJECTS */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #388e3c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 300px;
+    flex: 1 1 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #f0faf3; /* light greenish card background */
+    text-align: center;
 }
 
-.project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* ================= PROJECT IMAGES ================= */
-.project img {
+.project-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin: 15px 0;
-    border: 2px solid #14532d; /* dark green border */
-    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-/* ================= PROJECT HEADINGS & TEXT ================= */
-.project h3 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: #2f7d5b; /* medium green */
+/* CONTACT SECTION */
+.contact {
+    background-color: #43a047;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.project p {
-    font-size: 1rem;
-    color: #2c3e2f;
-    margin-top: 10px;
-}
-
-/* ================= LINKS ================= */
-a {
-    color: #2f7d5b;
+.contact a {
+    color: #fffacd;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #14532d;
+.contact a:hover {
     text-decoration: underline;
 }
 
-a:visited {
-    color: #1e5631;
-}
-
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    h2 {
-        font-size: 1.6rem;
-    }
-    .project p {
-        font-size: 0.95rem;
+
+    .project-card {
+        max-width: 90%;
     }
 }
