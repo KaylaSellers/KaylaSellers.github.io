@@ -1,22 +1,15 @@
-/* GENERAL STYLES */
 body {
-    background-color: #2e7d32; /* dark green */
-    color: #f5f5f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #2e7d32;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    color: #fffacd; /* light yellow for headings */
-    margin: 10px 0;
 }
 
 h1 {
     text-align: center;
+    margin: 30px 0;
     font-size: 3rem;
-    margin-top: 30px;
 }
 
 h2 {
@@ -24,12 +17,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* CONTAINER */
 .container {
     width: 90%;
     max-width: 1100px;
@@ -37,13 +24,7 @@ h3 {
     padding: 20px;
 }
 
-/* ABOUT SECTION */
-.about-me {
-    background-color: #388e3c; /* lighter green for section */
-    padding: 20px;
-    border-radius: 15px;
-}
-
+/* ABOUT */
 .about-content {
     display: flex;
     align-items: center;
@@ -55,77 +36,62 @@ h3 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fffacd;
+    border: 3px solid #2e7d32;
 }
 
-/* SKILLS SECTION */
-.skills {
-    background-color: #43a047; /* medium green */
-    padding: 20px;
-    border-radius: 15px;
+/* SKILLS */
+.skills ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .resume-links a {
     display: inline-block;
-    margin-right: 20px;
     margin-top: 10px;
     padding: 8px 15px;
-    background-color: #1b5e20;
-    color: #fffacd;
+    background-color: #2e7d32;
+    color: #fff;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .resume-links a:hover {
-    background-color: #f5f5dc;
-    color: #2e7d32;
+    background-color: #1b5e20;
 }
 
 /* PROJECTS */
-.projects {
+.projects .project {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
-    background-color: #388e3c;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    max-width: 300px;
-    flex: 1 1 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    background-color: #e8f5e9;
+    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-/* CONTACT SECTION */
+.projects .project img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.projects .project-info {
+    flex: 1;
+}
+
+/* CONTACT */
 .contact {
-    background-color: #43a047;
-    padding: 20px;
-    border-radius: 15px;
     text-align: center;
+    padding: 20px;
+    background-color: #c8e6c9;
 }
 
 .contact a {
-    color: #fffacd;
-    text-decoration: none;
+    color: #2e7d32;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .contact a:hover {
@@ -134,13 +100,13 @@ h3 {
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-    .about-content {
+    .projects .project {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .project-card {
-        max-width: 90%;
+    .projects .project img {
+        width: 80%;
     }
 }
